@@ -5,23 +5,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task - Cookie</title>
+    <style>
+                @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        body{
+            background-color:black;
+        }
+        p{
+            font-size: 40px;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;  
+            color: coral; 
+            margin-left: 50px;
+        }
+        label{
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif; 
+            color: rgb(19, 236, 103); 
+        }
+        h1{
+            font-family: 'Montserrat', sans-serif;
+            color: cyan;
+        }
+        .first{
+            float:top;
+            height:25%;
+            width: 50%;
+        }
+        .second{
+            float:bottom;
+            height:50%;
+        }
+        .third{
+            float:bottom;
+            height:75%;
+        }
+        .get{
+            float:left;
+            width:25%;
+        }
+        .del{
+            float:left;
+            width:50%;
+        }
+        .list{
+            float:right;
+            width:50%;
+            height: 25%;
+        }
+        .li p,.show p{
+            font-size: 20px;
+            text-align: left;
+        }
+        button{
+        color: white;
+        background-color: rgb(107, 22, 22);
+        border: 2px solid rgb(107, 22, 22);
+        border-radius: 10px;
+        margin: 3px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Set a new cookie</h1>
-    <label>Key</label>
-    <input type="text"></input>
-    <label>Value</label>
-    <input type="text"></input>
-    <button>ADD</button>
-    <h1>Get value of the cookie</h1>
-    <label>Key</label>
-    <input type="text"></input>
-    <button>GET</button>
-    <h1>Delete the cookie</h1>
-    <label>Key</label>
-    <input type="text"></input>
-    <button>Delete</button>
-    <h1>List all cookies</h1>
-
+    <p>COOKIES</p>
+    <div class="list">
+        <h1>List all cookies</h1>
+        <div class="li" id="li"></div>
+    </div>
+    <div class="first">
+        <div class="set">
+            <h1>Set a new cookie</h1><br><br><br>
+            <label>Key</label>
+            <input type="text" id='addkey'></input><br><br>
+            <label>Value</label>
+            <input type="text" id='addval'></input><br><br>
+            <button onclick="add()">ADD</button>
+        </div>
+    </div>
+    
+</div>
+    <div class="second">
+        <div class="get">
+            <h1>Get value of the cookie</h1><br>
+            <label>Key</label>
+            <input type="text" id='getkey'></input><br><br>
+            <button onclick="get()">GET</button>
+            <div class="show" id="show"></div>
+        </div>
+        <div class="third">
+            <div class="del">
+                <h1>Delete the cookie</h1><br><br><br>
+                <label>Key</label>
+                <input type="text" id='delkey'></input><br><br>
+                <button onclick="del()">Delete</button>
+            </div>
+        </div>
+        
+    </div>
+    <script src="cook.js"></script>
 </body>
 </html>
